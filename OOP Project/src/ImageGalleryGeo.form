@@ -20,24 +20,14 @@
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="Topic7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="120" max="32767" attributes="0"/>
-                      <Component id="Topic8" min="-2" max="-2" attributes="0"/>
+                      <Component id="RocksImage" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="VolcanoesImage" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="Topic5" min="-2" max="-2" attributes="0"/>
+                      <Component id="MapsImage" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="Topic6" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Topic3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="Topic4" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Topic1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="Topic2" min="-2" max="-2" attributes="0"/>
+                      <Component id="EarthImage" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
@@ -67,25 +57,15 @@
               <Component id="Title" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Topic1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Topic2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="RocksImage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="VolcanoesImage" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <EmptySpace pref="149" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Topic3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Topic4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EarthImage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="MapsImage" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Topic5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Topic6" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Topic7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Topic8" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Back" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Home" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -115,68 +95,39 @@
         <Property name="text" type="java.lang.String" value="Image Gallery"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Topic1">
+    <Component class="javax.swing.JButton" name="RocksImage">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Topic 1"/>
+        <Property name="text" type="java.lang.String" value="Rocks Image"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Topic2">
+    <Component class="javax.swing.JButton" name="VolcanoesImage">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Topic 2"/>
+        <Property name="text" type="java.lang.String" value="Volcanoes Image"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VolcanoesImageActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="MapsImage">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Cambria" size="20" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Maps Image"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Topic3">
+    <Component class="javax.swing.JButton" name="EarthImage">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Topic 3"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Topic4">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Cambria" size="20" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Topic 4"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Topic5">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Cambria" size="20" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Topic 5"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Topic6">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Cambria" size="20" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Topic 6"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Topic7">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Cambria" size="20" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Topic 7"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Topic8">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Cambria" size="20" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Topic 8"/>
+        <Property name="text" type="java.lang.String" value="Earth Image"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Home">

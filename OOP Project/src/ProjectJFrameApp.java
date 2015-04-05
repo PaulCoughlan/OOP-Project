@@ -42,6 +42,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             TextQuizGeo textQuizCard = new TextQuizGeo ();
             ImageGalleryGeo imageGalleryCard = new ImageGalleryGeo ();
             NotesGeo notesGeoCard = new NotesGeo ();
+            VolcanoesImages volcanoesImagesCard = new VolcanoesImages ();
             
         //Maths
             Exam_Papers  examCard= new Exam_Papers();
@@ -74,6 +75,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(textQuizCard, "Text Quiz");
     cardsContainer.add(imageGalleryCard, "Image Gallery");
     cardsContainer.add(notesGeoCard, "Notes");
+    cardsContainer.add(volcanoesImagesCard, "Volcanoe Image");
    
     //Maths
     cardsContainer.add(topicsCard, "Topics");
