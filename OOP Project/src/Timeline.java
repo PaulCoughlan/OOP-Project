@@ -1,25 +1,66 @@
 
 import java.awt.CardLayout;
 import java.awt.LayoutManager;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Paul1997
  */
 public class Timeline extends javax.swing.JPanel {
 
+     private String ScientistText;
+     private String DiscText;
+     private int year;
+
+     private ArrayList <Timeline> tList;
+
+
+     private int counter;
     /**
      * Creates new form Timeline
      */
     public Timeline() {
         initComponents();
+        ScientistText = new String();
+        DiscText = new String();
+        year = 0;
+        //create array of question objects
+        tList = new ArrayList <>();
+        //initialise count to 0
+        counter = 0;
     }
+
+    public void setScientistText(String ScientistText) {
+        this.ScientistText = ScientistText;
+    }
+
+    public void setDiscText(String DiscText) {
+        this.DiscText = DiscText;
+    }
+
+  public int  getYear() {
+        return year;
+    }
+
+    public String getScientistText() {
+        return ScientistText;
+    }
+
+    public String getDiscText() {
+        return DiscText;
+    }
+
+    public ArrayList<Timeline> gettList() {
+        return tList;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,6 +74,15 @@ public class Timeline extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         Back = new javax.swing.JButton();
         Home = new javax.swing.JButton();
+        ScientistLbl = new javax.swing.JLabel();
+        ScientistTf = new javax.swing.JTextField();
+        DiscLbl = new javax.swing.JLabel();
+        DiscTf = new javax.swing.JTextField();
+        yearLbl = new javax.swing.JLabel();
+        YearTf = new javax.swing.JTextField();
+        AddBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
+        displayBtn = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Cambria", 1, 40)); // NOI18N
         jLabel1.setText("Timeline");
@@ -53,6 +103,39 @@ public class Timeline extends javax.swing.JPanel {
             }
         });
 
+        ScientistLbl.setText("Scientist:");
+
+        DiscLbl.setText("Discovery/Theory:");
+
+        yearLbl.setText("Year");
+
+        YearTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YearTfActionPerformed(evt);
+            }
+        });
+
+        AddBtn.setText("Add");
+        AddBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddBtnActionPerformed(evt);
+            }
+        });
+
+        clearBtn.setText("Clear form");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtnActionPerformed(evt);
+            }
+        });
+
+        displayBtn.setText("Display All");
+        displayBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                displayBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -60,21 +143,65 @@ public class Timeline extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(122, 122, 122)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Back)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Back)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(Home)
-                .addContainerGap())
+                        .addGap(28, 28, 28)
+                        .addComponent(AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clearBtn)
+                        .addGap(44, 44, 44)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(Home)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(displayBtn)
+                        .addGap(35, 35, 35))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(yearLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DiscLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ScientistLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ScientistTf)
+                    .addComponent(DiscTf)
+                    .addComponent(YearTf, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ScientistLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ScientistTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(DiscLbl)
+                            .addComponent(DiscTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addComponent(yearLbl))
+                    .addComponent(YearTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddBtn)
+                    .addComponent(clearBtn)
+                    .addComponent(displayBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Back, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
@@ -100,10 +227,70 @@ public class Timeline extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_HomeActionPerformed
 
+    private void YearTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YearTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_YearTfActionPerformed
+
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+        // TODO add your handling code here:
+        ScientistTf.setText("");
+        DiscTf.setText("");
+        YearTf.setText("");
+    }//GEN-LAST:event_clearBtnActionPerformed
+
+    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
+        // TODO add your handling code here:
+        // Get text from TextFields
+        ScientistText = ScientistTf.getText();
+        DiscText = DiscTf.getText();
+        year = Integer.parseInt(YearTf.getText());
+
+        //create a new Question object
+        Timeline t = new Timeline();
+
+        //add contents of textfields to q
+        t.setScientistText(ScientistText);
+        t.setDiscText(DiscText);
+        t.setYear(year);
+
+        //add q to array of Question objects
+        tList.add(t);
+        //increase count to show that another object has been added to the array
+        counter++;
+    }//GEN-LAST:event_AddBtnActionPerformed
+
+    private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
+         // TODO add your handling code here:
+         for(int i = 0; i < tList.size();i++){
+            JOptionPane.showMessageDialog(null, "Scientist: "+tList.get(i).getScientistText()+"\n discovery/theory: "+tList.get(i).getDiscText()+"\n Year: "+tList.get(i).getYear());
+        }
+    }//GEN-LAST:event_displayBtnActionPerformed
+
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddBtn;
     private javax.swing.JButton Back;
+    private javax.swing.JLabel DiscLbl;
+    private javax.swing.JTextField DiscTf;
     private javax.swing.JButton Home;
+    private javax.swing.JLabel ScientistLbl;
+    private javax.swing.JTextField ScientistTf;
+    private javax.swing.JTextField YearTf;
+    private javax.swing.JButton clearBtn;
+    private javax.swing.JButton displayBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel yearLbl;
     // End of variables declaration//GEN-END:variables
+
+
+
+    private void setYear(int year) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+
+
 }
