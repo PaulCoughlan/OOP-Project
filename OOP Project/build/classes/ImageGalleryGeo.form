@@ -102,6 +102,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Rocks Image"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RocksImageActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="VolcanoesImage">
       <Properties>
@@ -121,6 +124,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Maps Image"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MapsImageActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="EarthImage">
       <Properties>
@@ -129,6 +135,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Earth Image"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EarthImageActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Home">
       <Properties>

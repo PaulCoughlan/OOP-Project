@@ -51,6 +51,11 @@ public class ImageGalleryGeo extends javax.swing.JPanel {
 
         RocksImage.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         RocksImage.setText("Rocks Image");
+        RocksImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RocksImageActionPerformed(evt);
+            }
+        });
 
         VolcanoesImage.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         VolcanoesImage.setText("Volcanoes Image");
@@ -62,9 +67,19 @@ public class ImageGalleryGeo extends javax.swing.JPanel {
 
         MapsImage.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         MapsImage.setText("Maps Image");
+        MapsImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MapsImageActionPerformed(evt);
+            }
+        });
 
         EarthImage.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         EarthImage.setText("Earth Image");
+        EarthImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EarthImageActionPerformed(evt);
+            }
+        });
 
         Home.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Home.setText("Home");
@@ -150,6 +165,33 @@ public class ImageGalleryGeo extends javax.swing.JPanel {
             cl.show(getParent(), "Volcanoe Image");
         }
     }//GEN-LAST:event_VolcanoesImageActionPerformed
+
+    private void RocksImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RocksImageActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "Rock Image");
+        }
+    }//GEN-LAST:event_RocksImageActionPerformed
+
+    private void EarthImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EarthImageActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Earth Image");
+    }  
+    }//GEN-LAST:event_EarthImageActionPerformed
+
+    private void MapsImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MapsImageActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Map Image");
+    }  
+    }//GEN-LAST:event_MapsImageActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

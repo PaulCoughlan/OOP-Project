@@ -30,12 +30,13 @@ public class RockImages extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
         Back = new javax.swing.JButton();
         Home = new javax.swing.JButton();
+        Picture = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        jLabel1.setText("Rocks");
+        Title.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Title.setText("Rocks");
 
         Back.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Back.setText("Back");
@@ -53,29 +54,38 @@ public class RockImages extends javax.swing.JPanel {
             }
         });
 
+        Picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RocksImage.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(202, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(197, 197, 197))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addComponent(Back)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Home)
-                .addContainerGap())
+                .addGap(10, 10, 10))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(217, 217, 217)
+                        .addComponent(Title))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(Picture)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
+                .addComponent(Title)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(Picture)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back)
-                    .addComponent(Home))
+                    .addComponent(Home)
+                    .addComponent(Back))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -102,6 +112,7 @@ public class RockImages extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
     private javax.swing.JButton Home;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Picture;
+    private javax.swing.JLabel Title;
     // End of variables declaration//GEN-END:variables
 }
