@@ -74,9 +74,9 @@ public class Timeline extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         Back = new javax.swing.JButton();
         Home = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        ScientistTf = new javax.swing.JTextField();
+        DiscTf = new javax.swing.JTextField();
+        YearTf = new javax.swing.JTextField();
         AddBtn = new javax.swing.JButton();
         clearBtn = new javax.swing.JButton();
         displayBtn = new javax.swing.JButton();
@@ -103,13 +103,13 @@ public class Timeline extends javax.swing.JPanel {
             }
         });
 
-        jTextField1.setMinimumSize(new java.awt.Dimension(6, 20));
-        jTextField1.setPreferredSize(new java.awt.Dimension(6, 20));
+        ScientistTf.setMinimumSize(new java.awt.Dimension(6, 20));
+        ScientistTf.setPreferredSize(new java.awt.Dimension(6, 20));
 
-        jTextField2.setMinimumSize(new java.awt.Dimension(6, 20));
-        jTextField2.setPreferredSize(new java.awt.Dimension(6, 20));
+        DiscTf.setMinimumSize(new java.awt.Dimension(6, 20));
+        DiscTf.setPreferredSize(new java.awt.Dimension(6, 20));
 
-        jTextField3.setPreferredSize(new java.awt.Dimension(6, 20));
+        YearTf.setPreferredSize(new java.awt.Dimension(6, 20));
 
         AddBtn.setText("Add");
         AddBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -170,9 +170,9 @@ public class Timeline extends javax.swing.JPanel {
                             .addComponent(yearLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(ScientistTf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(YearTf, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                            .addComponent(DiscTf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
@@ -182,15 +182,15 @@ public class Timeline extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScientistTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScientistLbl))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DiscTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DiscLbl))
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(YearTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(yearLbl))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -269,14 +269,14 @@ public class Timeline extends javax.swing.JPanel {
     private javax.swing.JButton AddBtn;
     private javax.swing.JButton Back;
     private javax.swing.JLabel DiscLbl;
+    private javax.swing.JTextField DiscTf;
     private javax.swing.JButton Home;
     private javax.swing.JLabel ScientistLbl;
+    private javax.swing.JTextField ScientistTf;
+    private javax.swing.JTextField YearTf;
     private javax.swing.JButton clearBtn;
     private javax.swing.JButton displayBtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel yearLbl;
     // End of variables declaration//GEN-END:variables
 
