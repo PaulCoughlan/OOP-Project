@@ -65,7 +65,8 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             Biology BioCard = new Biology();
             BioPopQuiz BioQCard = new BioPopQuiz();
             BioImgQuiz BioImageCard = new BioImgQuiz();
-    
+            NotesBio NotesBioCard = new NotesBio();
+            
             //physics
     cardsContainer = new JPanel(new CardLayout ());
     cardsContainer.add(mainCard, "Main");
@@ -109,7 +110,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
    cardsContainer.add(BioCard, "Biology");
    cardsContainer.add(BioQCard, "BioQuiz");
    cardsContainer.add(BioImageCard, "BioImageQuiz");
-  
+   cardsContainer.add(NotesBioCard, "NotesBio");
         this.add(cardsContainer);
         CardLayout cl = (CardLayout)(cardsContainer.getLayout());
         cl.show(cardsContainer, "Main");
