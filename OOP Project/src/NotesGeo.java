@@ -32,15 +32,18 @@ public class NotesGeo extends javax.swing.JPanel {
 
         Back = new javax.swing.JButton();
         Title = new javax.swing.JLabel();
-        Topic1 = new javax.swing.JButton();
-        Topic2 = new javax.swing.JButton();
-        Topic3 = new javax.swing.JButton();
-        Topic4 = new javax.swing.JButton();
-        Topic5 = new javax.swing.JButton();
-        Topic6 = new javax.swing.JButton();
-        Topic7 = new javax.swing.JButton();
-        Topic8 = new javax.swing.JButton();
+        Earthcard = new javax.swing.JButton();
+        Rockcard = new javax.swing.JButton();
+        Mapcard = new javax.swing.JButton();
+        Volcanoescard = new javax.swing.JButton();
+        Earthnote = new javax.swing.JButton();
+        Rocksnote = new javax.swing.JButton();
+        Mapsnote = new javax.swing.JButton();
+        Volcanoesnote = new javax.swing.JButton();
         Home = new javax.swing.JButton();
+        FlashCards = new javax.swing.JLabel();
+        UserNotes = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         Back.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Back.setText("Back");
@@ -53,29 +56,69 @@ public class NotesGeo extends javax.swing.JPanel {
         Title.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Title.setText("Notes");
 
-        Topic1.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic1.setText("Topic 1");
+        Earthcard.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Earthcard.setText("Earth Card");
+        Earthcard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EarthcardActionPerformed(evt);
+            }
+        });
 
-        Topic2.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic2.setText("Topic 2");
+        Rockcard.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Rockcard.setText("Rocks Card");
+        Rockcard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RockcardActionPerformed(evt);
+            }
+        });
 
-        Topic3.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic3.setText("Topic 3");
+        Mapcard.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Mapcard.setText("Maps Card");
+        Mapcard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MapcardActionPerformed(evt);
+            }
+        });
 
-        Topic4.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic4.setText("Topic 4");
+        Volcanoescard.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Volcanoescard.setText("Volcanoes Card");
+        Volcanoescard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolcanoescardActionPerformed(evt);
+            }
+        });
 
-        Topic5.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic5.setText("Topic 5");
+        Earthnote.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Earthnote.setText("Earth Note");
+        Earthnote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EarthnoteActionPerformed(evt);
+            }
+        });
 
-        Topic6.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic6.setText("Topic 6");
+        Rocksnote.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Rocksnote.setText("Rocks Note");
+        Rocksnote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RocksnoteActionPerformed(evt);
+            }
+        });
 
-        Topic7.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic7.setText("Topic 7");
+        Mapsnote.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Mapsnote.setText("Maps Note");
+        Mapsnote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MapsnoteActionPerformed(evt);
+            }
+        });
 
-        Topic8.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Topic8.setText("Topic 8");
+        Volcanoesnote.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        Volcanoesnote.setText("Volcanoes Note");
+        Volcanoesnote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolcanoesnoteActionPerformed(evt);
+            }
+        });
 
         Home.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Home.setText("Home");
@@ -85,6 +128,15 @@ public class NotesGeo extends javax.swing.JPanel {
             }
         });
 
+        FlashCards.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        FlashCards.setText("Flash Cards");
+
+        UserNotes.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        UserNotes.setText("User notes");
+
+        jLabel3.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        jLabel3.setText("Only 6 notes per user");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,63 +144,72 @@ public class NotesGeo extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(Back)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Home))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Mapsnote)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Volcanoesnote))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Earthnote)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Rocksnote))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Mapcard)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Volcanoescard))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Earthcard)
+                                .addGap(107, 107, 107)
+                                .addComponent(Rockcard))))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addComponent(Title))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(181, 181, 181)
-                                .addComponent(Title))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Topic7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Topic8))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Topic5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Topic6))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Topic3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Topic4))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Topic1)
-                                        .addGap(107, 107, 107)
-                                        .addComponent(Topic2)))))
-                        .addGap(0, 89, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(UserNotes)
+                            .addComponent(FlashCards)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Back)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home)))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Title)
-                .addGap(44, 44, 44)
+                .addGap(15, 15, 15)
+                .addComponent(FlashCards)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Topic1)
-                    .addComponent(Topic2))
+                    .addComponent(Earthcard)
+                    .addComponent(Rockcard))
                 .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Topic3)
-                    .addComponent(Topic4))
-                .addGap(62, 62, 62)
+                    .addComponent(Mapcard)
+                    .addComponent(Volcanoescard))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(UserNotes)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Topic5)
-                    .addComponent(Topic6))
+                    .addComponent(Earthnote)
+                    .addComponent(Rocksnote))
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Topic7)
-                    .addComponent(Topic8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                    .addComponent(Mapsnote)
+                    .addComponent(Volcanoesnote))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
                     .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Home))
-                .addGap(20, 20, 20))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -170,18 +231,93 @@ public class NotesGeo extends javax.swing.JPanel {
     }   
     }//GEN-LAST:event_BackActionPerformed
 
+    private void VolcanoescardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolcanoescardActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Volcanoes Notes");
+    }   
+    }//GEN-LAST:event_VolcanoescardActionPerformed
+
+    private void EarthcardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EarthcardActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Earth Card");
+    }  
+    }//GEN-LAST:event_EarthcardActionPerformed
+
+    private void RockcardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RockcardActionPerformed
+        // TODO add your handling code here:
+            LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Rock Card");
+    }  
+    }//GEN-LAST:event_RockcardActionPerformed
+
+    private void MapcardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MapcardActionPerformed
+        // TODO add your handling code here:    
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Map Card");
+    }  
+    }//GEN-LAST:event_MapcardActionPerformed
+
+    private void EarthnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EarthnoteActionPerformed
+        // TODO add your handling code here:
+            LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Earth Note");
+    }  
+    }//GEN-LAST:event_EarthnoteActionPerformed
+
+    private void RocksnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RocksnoteActionPerformed
+        // TODO add your handling code here:
+            LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Rocks Note");
+    }  
+    }//GEN-LAST:event_RocksnoteActionPerformed
+
+    private void MapsnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MapsnoteActionPerformed
+        // TODO add your handling code here:
+            LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Maps Note");
+    }  
+    }//GEN-LAST:event_MapsnoteActionPerformed
+
+    private void VolcanoesnoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolcanoesnoteActionPerformed
+        // TODO add your handling code here:
+            LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+        CardLayout cl = (CardLayout)layout;
+        cl.show(getParent(), "Volcanoes Note");
+    }  
+    }//GEN-LAST:event_VolcanoesnoteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.JButton Earthcard;
+    private javax.swing.JButton Earthnote;
+    private javax.swing.JLabel FlashCards;
     private javax.swing.JButton Home;
+    private javax.swing.JButton Mapcard;
+    private javax.swing.JButton Mapsnote;
+    private javax.swing.JButton Rockcard;
+    private javax.swing.JButton Rocksnote;
     private javax.swing.JLabel Title;
-    private javax.swing.JButton Topic1;
-    private javax.swing.JButton Topic2;
-    private javax.swing.JButton Topic3;
-    private javax.swing.JButton Topic4;
-    private javax.swing.JButton Topic5;
-    private javax.swing.JButton Topic6;
-    private javax.swing.JButton Topic7;
-    private javax.swing.JButton Topic8;
+    private javax.swing.JLabel UserNotes;
+    private javax.swing.JButton Volcanoescard;
+    private javax.swing.JButton Volcanoesnote;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

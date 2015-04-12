@@ -44,8 +44,6 @@ public class ExperimentQuizGUi extends javax.swing.JPanel {
 
         setMinimumSize(new java.awt.Dimension(450, 500));
 
-        ExpLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul1997\\Desktop\\OOP project\\Physics.png")); // NOI18N
-
         oneLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         oneLbl.setText("1:");
 
@@ -143,7 +141,7 @@ public class ExperimentQuizGUi extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(home4Btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BackBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(6, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
