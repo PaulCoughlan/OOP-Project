@@ -46,7 +46,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             RockImages rockImagesCard = new RockImages ();
             EarthImages earthImagesCard = new EarthImages();
             MapImages mapImagesCard = new MapImages();
-            VolcanoesNote volcanoesNotesCard = new VolcanoesNote();
+//            VolcanoesNote volcanoesNotesCard = new VolcanoesNote();
             VolcanoesCard volcanoesCardCard = new VolcanoesCard();
             MapCard mapCardCard = new MapCard();
             MapNote mapNoteCard = new MapNote();
@@ -64,7 +64,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
         //Biology
             Biology BioCard = new Biology();
             BioPopQuiz BioQCard = new BioPopQuiz();
-            BioImgQuiz BioImageCard = new BioImgQuiz();
+            //BioImgQuiz BioImageCard = new BioImgQuiz();
             NotesBio NotesBioCard = new NotesBio();
             
             //physics
@@ -91,7 +91,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(rockImagesCard, "Rock Image");
     cardsContainer.add(earthImagesCard, "Earth Image");
     cardsContainer.add(mapImagesCard, "Map Image");
-    cardsContainer.add(volcanoesNotesCard, "Volcanoes Notes");
+  //  cardsContainer.add(volcanoesNotesCard, "Volcanoes Notes");
     cardsContainer.add(volcanoesCardCard, "Volcanoes Card");
     cardsContainer.add(earthNoteCard, "Earth Note");
     cardsContainer.add(earthCardCard, "Earth Card");
@@ -109,7 +109,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
    //Biology
    cardsContainer.add(BioCard, "Biology");
    cardsContainer.add(BioQCard, "BioQuiz");
-   cardsContainer.add(BioImageCard, "BioImageQuiz");
+   //cardsContainer.add(BioImageCard, "BioImageQuiz");
    cardsContainer.add(NotesBioCard, "NotesBio");
         this.add(cardsContainer);
         CardLayout cl = (CardLayout)(cardsContainer.getLayout());

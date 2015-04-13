@@ -32,82 +32,102 @@ public class HumanBodyQuiz extends javax.swing.JPanel {
         selectionD = new javax.swing.JRadioButton();
         selectionE = new javax.swing.JRadioButton();
         selectionF = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
-        q1 = new javax.swing.JButton();
-        next = new javax.swing.JButton();
+        qtitle = new javax.swing.JLabel();
+        q1Btn = new javax.swing.JButton();
+        nextBtn = new javax.swing.JButton();
+        bioPopQuiz = new javax.swing.JLabel();
 
-        selectionA.setText("jRadioButton1");
+        selectionA.setText("<html>is studied using both invasive and noninvasive methods with the goal of obtaining<br/> information about the macroscopic structure and organization of organs and organ systems.</html>");
         selectionA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectionAActionPerformed(evt);
             }
         });
 
-        selectionB.setText("jRadioButton2");
+        selectionB.setText(" is studied primarily through the techniques of electrophysiology.");
 
-        selectionC.setText("jRadioButton3");
+        selectionC.setText(" is the branch of biology concerned with the study of the structure of organisms and their parts");
+        selectionC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectionCActionPerformed(evt);
+            }
+        });
 
-        selectionD.setText("jRadioButton4");
+        selectionD.setText(" is the study of the interaction between electromagnetic fields and biological entities.");
 
-        selectionE.setText("jRadioButton5");
+        selectionE.setText(" is a convergence of pathology with physiology.");
 
-        selectionF.setText("jRadioButton6");
+        selectionF.setText("None of them");
 
-        jLabel1.setText("jLabel1");
+        qtitle.setFont(new java.awt.Font("Franklin Gothic Book", 1, 14)); // NOI18N
+        qtitle.setText("What is the definition of Human Anatonomy?");
 
-        q1.setText("Question 1");
+        q1Btn.setText("Question 1");
 
-        next.setText("Next");
+        nextBtn.setText("Next");
+
+        bioPopQuiz.setFont(new java.awt.Font("Franklin Gothic Book", 1, 24)); // NOI18N
+        bioPopQuiz.setText("Biology Pop Quiz ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(selectionB)
+                    .addComponent(selectionD)
+                    .addComponent(selectionE)
+                    .addComponent(selectionF)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(selectionA)
-                            .addComponent(selectionB)
-                            .addComponent(selectionC)
-                            .addComponent(selectionD)
-                            .addComponent(selectionE)
-                            .addComponent(selectionF)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(q1)
+                        .addComponent(q1Btn)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1))
+                        .addComponent(qtitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(next)))
-                .addContainerGap(307, Short.MAX_VALUE))
+                        .addGap(67, 67, 67)
+                        .addComponent(nextBtn))
+                    .addComponent(selectionC, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bioPopQuiz)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(selectionA, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bioPopQuiz)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(q1))
+                    .addComponent(qtitle)
+                    .addComponent(q1Btn))
                 .addGap(19, 19, 19)
-                .addComponent(next)
-                .addGap(18, 18, 18)
-                .addComponent(selectionA)
-                .addGap(18, 18, 18)
+                .addComponent(nextBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(selectionA, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addComponent(selectionB)
-                .addGap(18, 18, 18)
-                .addComponent(selectionC)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
+                .addComponent(selectionC, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(selectionD)
                 .addGap(18, 18, 18)
                 .addComponent(selectionE)
                 .addGap(18, 18, 18)
                 .addComponent(selectionF)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selectionCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectionCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selectionCActionPerformed
 
     private void selectionAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectionAActionPerformed
         // TODO add your handling code here:
@@ -115,9 +135,10 @@ public class HumanBodyQuiz extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton next;
-    private javax.swing.JButton q1;
+    private javax.swing.JLabel bioPopQuiz;
+    private javax.swing.JButton nextBtn;
+    private javax.swing.JButton q1Btn;
+    private javax.swing.JLabel qtitle;
     private javax.swing.JRadioButton selectionA;
     private javax.swing.JRadioButton selectionB;
     private javax.swing.JRadioButton selectionC;

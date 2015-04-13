@@ -16,57 +16,63 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="selectionA" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectionB" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectionC" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectionD" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectionE" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="selectionF" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="selectionB" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="selectionD" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="selectionE" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="selectionF" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="q1" min="-2" max="-2" attributes="0"/>
+                      <Component id="q1Btn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="qtitle" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                      <Component id="next" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="selectionC" alignment="0" min="-2" pref="415" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="307" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bioPopQuiz" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <Component id="selectionA" min="-2" pref="475" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bioPopQuiz" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="q1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="qtitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="q1Btn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Component id="next" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="selectionA" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="selectionA" min="-2" pref="56" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="selectionB" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="selectionC" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Component id="selectionC" min="-2" pref="41" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="selectionD" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="selectionE" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="selectionF" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="171" max="32767" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -74,7 +80,9 @@
   <SubComponents>
     <Component class="javax.swing.JRadioButton" name="selectionA">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton1"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;&lt;html&gt;is studied using both invasive and noninvasive methods with the goal of obtaining&lt;br/&gt; information about the macroscopic structure and organization of organs and organ systems.&lt;/html&gt;&quot;" type="code"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectionAActionPerformed"/>
@@ -82,42 +90,56 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="selectionB">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton2"/>
+        <Property name="text" type="java.lang.String" value=" is studied primarily through the techniques of electrophysiology."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="selectionC">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton3"/>
+        <Property name="text" type="java.lang.String" value=" is the branch of biology concerned with the study of the structure of organisms and their parts"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectionCActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="selectionD">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton4"/>
+        <Property name="text" type="java.lang.String" value=" is the study of the interaction between electromagnetic fields and biological entities."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="selectionE">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton5"/>
+        <Property name="text" type="java.lang.String" value=" is a convergence of pathology with physiology."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="selectionF">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton6"/>
+        <Property name="text" type="java.lang.String" value="None of them"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="qtitle">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Franklin Gothic Book" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="What is the definition of Human Anatonomy?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="q1">
+    <Component class="javax.swing.JButton" name="q1Btn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Question 1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="next">
+    <Component class="javax.swing.JButton" name="nextBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Next"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bioPopQuiz">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Franklin Gothic Book" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Biology Pop Quiz "/>
       </Properties>
     </Component>
   </SubComponents>
