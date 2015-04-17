@@ -46,14 +46,10 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             RockImages rockImagesCard = new RockImages ();
             EarthImages earthImagesCard = new EarthImages();
             MapImages mapImagesCard = new MapImages();
-            VolcanoesNote volcanoesNotesCard = new VolcanoesNote();
             VolcanoesCard volcanoesCardCard = new VolcanoesCard();
             MapCard mapCardCard = new MapCard();
-            MapNote mapNoteCard = new MapNote();
             EarthCard earthCardCard = new EarthCard();
-            EarthNote earthNoteCard = new EarthNote();
             RocksCard rocksCardCard = new RocksCard();
-            RocksNote rockNoteCard = new RocksNote();
                     
         //Maths
             Exam_Papers  examCard= new Exam_Papers();
@@ -90,13 +86,9 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(rockImagesCard, "Rock Image");
     cardsContainer.add(earthImagesCard, "Earth Image");
     cardsContainer.add(mapImagesCard, "Map Image");
-    cardsContainer.add(volcanoesNotesCard, "Volcanoes Notes");
     cardsContainer.add(volcanoesCardCard, "Volcanoes Card");
-    cardsContainer.add(earthNoteCard, "Earth Note");
     cardsContainer.add(earthCardCard, "Earth Card");
-    cardsContainer.add(rockNoteCard, "Rock Note");
     cardsContainer.add(rocksCardCard, "Rock Card");
-    cardsContainer.add(mapNoteCard, "Map Card");
     cardsContainer.add(mapCardCard, "Map Note");
     
     //Maths
