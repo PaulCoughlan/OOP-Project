@@ -9,7 +9,7 @@ import java.awt.LayoutManager;
  */
 /**
  *
- * @author Mariana
+ * @author Wagner
  */
 public class Biology extends javax.swing.JPanel {
 
@@ -130,7 +130,7 @@ public class Biology extends javax.swing.JPanel {
                  LayoutManager layout = getParent().getLayout();
         if (layout instanceof CardLayout) {
             CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "Notes");
+            cl.show(getParent(), "NotesBio");
         }
     }//GEN-LAST:event_bioNotesActionPerformed
 
