@@ -63,10 +63,10 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
         //Biology
             Biology BioCard = new Biology();
             NotesBio NotesBioCard = new NotesBio();
-            BioHbNotes BioHbCard = new BioHbNotes();
-            BioNutriNotes BioNutriCard = new BioNutriNotes();
-            BioCellsNotes BioCellsCard = new BioCellsNotes();
-            BioGeneticsNotes BioGeneticsCard = new BioGeneticsNotes();
+            BioHbNotesGUI BioHbCard = new BioHbNotesGUI();
+            BioNutriNotesGUI BioNutriCard = new BioNutriNotesGUI();
+            BioCellsNotesGUI BioCellsCard = new BioCellsNotesGUI();
+            BioGeneticsNotesGUI BioGeneticsCard = new BioGeneticsNotesGUI();
             
            //Pop Quiz
             BioPopQuizMenu BioPopQuizMenuCard = new BioPopQuizMenu();

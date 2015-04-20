@@ -39,6 +39,7 @@ public class BioImageQuiz2 extends javax.swing.JPanel {
         verifyTf = new javax.swing.JTextField();
         previousBtn = new javax.swing.JButton();
         nextBtn = new javax.swing.JButton();
+        homeBtn = new javax.swing.JButton();
         panelLbl = new javax.swing.JLabel();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -73,7 +74,7 @@ public class BioImageQuiz2 extends javax.swing.JPanel {
             }
         });
         jPanel1.add(previousBtn);
-        previousBtn.setBounds(280, 460, 80, 23);
+        previousBtn.setBounds(290, 430, 80, 23);
 
         nextBtn.setText("Next");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +83,16 @@ public class BioImageQuiz2 extends javax.swing.JPanel {
             }
         });
         jPanel1.add(nextBtn);
-        nextBtn.setBounds(370, 460, 55, 23);
+        nextBtn.setBounds(380, 430, 55, 23);
+
+        homeBtn.setText("Home");
+        homeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(homeBtn);
+        homeBtn.setBounds(360, 460, 59, 23);
 
         panelLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\Wagner Semboloni\\College\\NCI\\First Year\\2 Semester\\OOP\\Project OOP\\OOP Project\\src\\calf.png")); // NOI18N
         jPanel1.add(panelLbl);
@@ -92,11 +102,11 @@ public class BioImageQuiz2 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -118,10 +128,20 @@ public class BioImageQuiz2 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_nextBtnActionPerformed
 
+    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "Main");
+        }
+    }//GEN-LAST:event_homeBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ansLbl;
     private javax.swing.JTextField ansTf;
+    private javax.swing.JButton homeBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nextBtn;
     private javax.swing.JLabel panelLbl;

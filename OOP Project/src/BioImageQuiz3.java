@@ -30,6 +30,7 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        answerGroup = new javax.swing.ButtonGroup();
         titleLbl = new javax.swing.JLabel();
         question3Lbl = new javax.swing.JLabel();
         A_answerRb = new javax.swing.JRadioButton();
@@ -41,6 +42,7 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
         submitBtn = new javax.swing.JButton();
         nextBtn = new javax.swing.JButton();
         previousBtn = new javax.swing.JButton();
+        homeBtn = new javax.swing.JButton();
         panelLbl = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -56,6 +58,7 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
         add(question3Lbl);
         question3Lbl.setBounds(20, 60, 360, 15);
 
+        answerGroup.add(A_answerRb);
         A_answerRb.setText("A -  Gluteus, triceps, quadriceps, hamstrings   ");
         A_answerRb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,14 +68,17 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
         add(A_answerRb);
         A_answerRb.setBounds(20, 350, 247, 23);
 
+        answerGroup.add(B_answerRb);
         B_answerRb.setText("B -  Biceps, quadriceps, hamstrings");
         add(B_answerRb);
         B_answerRb.setBounds(20, 370, 230, 23);
 
+        answerGroup.add(C_answerRb);
         C_answerRb.setText("C - Calf, quadriceps, hamstrings, Gluteus");
         add(C_answerRb);
         C_answerRb.setBounds(20, 390, 240, 23);
 
+        answerGroup.add(D_answerRb);
         D_answerRb.setText("D - Gluteus, quadriceps, hamstrings");
         add(D_answerRb);
         D_answerRb.setBounds(20, 410, 210, 23);
@@ -94,7 +100,7 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
             }
         });
         add(nextBtn);
-        nextBtn.setBounds(380, 460, 55, 23);
+        nextBtn.setBounds(340, 440, 55, 23);
 
         previousBtn.setText("previous");
         previousBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +109,16 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
             }
         });
         add(previousBtn);
-        previousBtn.setBounds(290, 460, 80, 23);
+        previousBtn.setBounds(257, 440, 73, 23);
+
+        homeBtn.setText("Home");
+        homeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeBtnActionPerformed(evt);
+            }
+        });
+        add(homeBtn);
+        homeBtn.setBounds(333, 470, 60, 23);
 
         panelLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\Wagner Semboloni\\College\\NCI\\First Year\\2 Semester\\OOP\\Project OOP\\OOP Project\\src\\quadriceps.png")); // NOI18N
         add(panelLbl);
@@ -132,6 +147,15 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_previousBtnActionPerformed
 
+    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if (layout instanceof CardLayout) {
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "Main");
+        }        
+    }//GEN-LAST:event_homeBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton A_answerRb;
@@ -140,6 +164,8 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
     private javax.swing.JRadioButton D_answerRb;
     private javax.swing.JLabel ansLbl;
     private javax.swing.JTextField ansTf;
+    private javax.swing.ButtonGroup answerGroup;
+    private javax.swing.JButton homeBtn;
     private javax.swing.JButton nextBtn;
     private javax.swing.JLabel panelLbl;
     private javax.swing.JButton previousBtn;

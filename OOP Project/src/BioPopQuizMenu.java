@@ -30,6 +30,7 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        titleLbl = new javax.swing.JLabel();
         quiz1Lbl = new javax.swing.JLabel();
         quiz1Btn = new javax.swing.JButton();
         quiz2Lbl = new javax.swing.JLabel();
@@ -38,10 +39,15 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
         quiz3Btn = new javax.swing.JButton();
         quiz4Lbl = new javax.swing.JLabel();
         quiz4Btn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        quiz5Lbl = new javax.swing.JLabel();
         quiz5Btn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
-        titleLbl = new javax.swing.JLabel();
+        homeBtn = new javax.swing.JButton();
+
+        setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        titleLbl.setText("Bio Pop Quiz Menu");
 
         quiz1Lbl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         quiz1Lbl.setText("Chromosomes & Genetics");
@@ -63,8 +69,8 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
 
         quiz4Btn.setText("Quiz Four");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setText("Genetics Crosses");
+        quiz5Lbl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        quiz5Lbl.setText("Genetics Crosses");
 
         quiz5Btn.setText("Quiz Five");
 
@@ -75,8 +81,7 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
             }
         });
 
-        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleLbl.setText("Bio Pop Quiz Menu");
+        homeBtn.setText("Home");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -85,7 +90,9 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(backBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(homeBtn)
+                .addGap(60, 60, 60))
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,9 +105,9 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
                                 .addComponent(quiz3Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(quiz1Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(quiz2Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(quiz5Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(quiz4Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(quiz2Btn)
                             .addComponent(quiz3Btn)
@@ -132,10 +139,12 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
                     .addComponent(quiz4Btn))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quiz5Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(quiz5Btn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
-                .addComponent(backBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn)
+                    .addComponent(homeBtn))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -152,7 +161,7 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton homeBtn;
     private javax.swing.JButton quiz1Btn;
     private javax.swing.JLabel quiz1Lbl;
     private javax.swing.JButton quiz2Btn;
@@ -162,6 +171,7 @@ public class BioPopQuizMenu extends javax.swing.JPanel {
     private javax.swing.JButton quiz4Btn;
     private javax.swing.JLabel quiz4Lbl;
     private javax.swing.JButton quiz5Btn;
+    private javax.swing.JLabel quiz5Lbl;
     private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }
