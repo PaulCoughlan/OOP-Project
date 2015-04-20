@@ -92,6 +92,8 @@ public class RocksNoteGUI extends javax.swing.JPanel {
         NoteLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         NoteLbl.setText("Note");
 
+        rockNoteTf.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+
         AddBtn.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         AddBtn.setText("Add");
         AddBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -174,17 +176,19 @@ public class RocksNoteGUI extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Back)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Home)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(NoteLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rockNoteTf))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(AddBtn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Back)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Home))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(AddBtn)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,7 +268,7 @@ public class RocksNoteGUI extends javax.swing.JPanel {
     private void DisplayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayBtnActionPerformed
         //loop through objects
         for (int i = 0; i < roc.length; i = i+1){
-            JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "/+n " + roc[i].getSubject());
+            JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "\\n " + roc[i].getSubject());
         }
     }//GEN-LAST:event_DisplayBtnActionPerformed
 
@@ -273,7 +277,7 @@ public class RocksNoteGUI extends javax.swing.JPanel {
        
        for(int i = 0; i < roc.length; i = i+1){
            if(searchSubject.equalsIgnoreCase(roc[i].getSubject())){
-               JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "/+n " + roc[i].getSubject());
+               JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "\\n " + roc[i].getSubject());
            }
        }
     }//GEN-LAST:event_SearchBtnActionPerformed

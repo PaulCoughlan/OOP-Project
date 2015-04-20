@@ -31,21 +31,12 @@ public class Quiz extends javax.swing.JPanel {
     private void initComponents() {
 
         Title = new javax.swing.JLabel();
-        ImageQuizGeo = new javax.swing.JButton();
         TextQuizGeo = new javax.swing.JButton();
         Back = new javax.swing.JButton();
         Home = new javax.swing.JButton();
 
         Title.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         Title.setText("Quiz");
-
-        ImageQuizGeo.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        ImageQuizGeo.setText("Image Quiz");
-        ImageQuizGeo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ImageQuizGeoActionPerformed(evt);
-            }
-        });
 
         TextQuizGeo.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         TextQuizGeo.setText("Text Quiz");
@@ -83,52 +74,39 @@ public class Quiz extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(191, 191, 191)
-                                .addComponent(Title))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(170, 170, 170)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextQuizGeo)
-                                    .addComponent(ImageQuizGeo))))
-                        .addGap(0, 141, Short.MAX_VALUE)))
+                        .addGap(191, 191, 191)
+                        .addComponent(Title)
+                        .addGap(0, 210, Short.MAX_VALUE)))
                 .addGap(10, 10, 10))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(168, 168, 168)
+                .addComponent(TextQuizGeo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(Title)
-                .addGap(91, 91, 91)
-                .addComponent(ImageQuizGeo)
-                .addGap(140, 140, 140)
-                .addComponent(TextQuizGeo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                .addComponent(Back)
-                .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Home)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(Title)
+                        .addGap(173, 173, 173)
+                        .addComponent(TextQuizGeo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
+                        .addComponent(Back))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Home)))
                 .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ImageQuizGeoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImageQuizGeoActionPerformed
-        // TODO add your handling code here:
-         LayoutManager layout = getParent().getLayout();
-        if (layout instanceof CardLayout) {
-            CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "Text Quiz");
-        }
-    }//GEN-LAST:event_ImageQuizGeoActionPerformed
 
     private void TextQuizGeoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextQuizGeoActionPerformed
         // TODO add your handling code here:
          LayoutManager layout = getParent().getLayout();
         if (layout instanceof CardLayout) {
             CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "Image Quiz");
+            cl.show(getParent(), "Text Quiz");
         }
     }//GEN-LAST:event_TextQuizGeoActionPerformed
 
@@ -155,7 +133,6 @@ public class Quiz extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
     private javax.swing.JButton Home;
-    private javax.swing.JButton ImageQuizGeo;
     private javax.swing.JButton TextQuizGeo;
     private javax.swing.JLabel Title;
     // End of variables declaration//GEN-END:variables

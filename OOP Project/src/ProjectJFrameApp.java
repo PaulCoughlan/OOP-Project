@@ -38,7 +38,6 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
         //Geography
             Geography geographyCard = new Geography ();
             Quiz quizGeoCard = new Quiz ();
-            ImageQuizGeo imageQuizCard = new ImageQuizGeo ();
             TextQuizGeoGUI textQuizGeoGUICard = new TextQuizGeoGUI ();
             ImageGalleryGeo imageGalleryCard = new ImageGalleryGeo ();
             NotesGeo notesGeoCard = new NotesGeo ();
@@ -53,6 +52,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             EarthsNoteGUI earthsNoteGUICard = new EarthsNoteGUI();
             MapsNoteGUI mapsNoteGUICard = new MapsNoteGUI();
             RocksNoteGUI rocksNoteGUICard = new RocksNoteGUI();
+            VolcanoesNotesGUI volcanoesNotesGUICard = new VolcanoesNotesGUI();
                     
         //Maths
             Exam_Papers  examCard= new Exam_Papers();
@@ -92,7 +92,6 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
      //Geography
     cardsContainer.add(geographyCard, "Geography");
     cardsContainer.add(quizGeoCard, "Quiz");
-    cardsContainer.add(imageQuizCard, "Image Quiz");
     cardsContainer.add(textQuizGeoGUICard, "Text Quiz");
     cardsContainer.add(imageGalleryCard, "Image Gallery");
     cardsContainer.add(notesGeoCard, "Notes");
@@ -107,6 +106,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(earthsNoteGUICard,"Earth Note");
     cardsContainer.add(mapsNoteGUICard,"Maps Note");
     cardsContainer.add(rocksNoteGUICard,"Rocks Note");
+    cardsContainer.add(volcanoesNotesGUICard,"Volcanoes Note");
     
     //Maths
     cardsContainer.add(topicsCard, "Topics");
