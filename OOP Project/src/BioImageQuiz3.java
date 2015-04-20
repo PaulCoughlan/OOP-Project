@@ -30,33 +30,62 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        submitBtn = new javax.swing.JButton();
+        titleLbl = new javax.swing.JLabel();
+        question3Lbl = new javax.swing.JLabel();
+        A_answerRb = new javax.swing.JRadioButton();
+        B_answerRb = new javax.swing.JRadioButton();
+        C_answerRb = new javax.swing.JRadioButton();
+        D_answerRb = new javax.swing.JRadioButton();
         ansLbl = new javax.swing.JLabel();
         ansTf = new javax.swing.JTextField();
-        verifyTf = new javax.swing.JTextField();
-        question3Lbl = new javax.swing.JLabel();
+        submitBtn = new javax.swing.JButton();
         nextBtn = new javax.swing.JButton();
-        titleLbl = new javax.swing.JLabel();
         previousBtn = new javax.swing.JButton();
+        panelLbl = new javax.swing.JLabel();
 
-        jRadioButton1.setText("jRadioButton1");
+        setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        setLayout(null);
 
-        jRadioButton2.setText("jRadioButton2");
-
-        jRadioButton3.setText("jRadioButton3");
-
-        jRadioButton4.setText("jRadioButton4");
-
-        submitBtn.setText("Submit");
-
-        ansLbl.setText("Answer: ");
+        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        titleLbl.setText("Image Quiz ");
+        add(titleLbl);
+        titleLbl.setBounds(20, 10, 83, 40);
 
         question3Lbl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        question3Lbl.setText("Question 3");
+        question3Lbl.setText("Question 3: Which muscles are represented on picture Bellow?");
+        add(question3Lbl);
+        question3Lbl.setBounds(20, 60, 360, 15);
+
+        A_answerRb.setText("A -  Gluteus, triceps, quadriceps, hamstrings   ");
+        A_answerRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A_answerRbActionPerformed(evt);
+            }
+        });
+        add(A_answerRb);
+        A_answerRb.setBounds(20, 350, 247, 23);
+
+        B_answerRb.setText("B -  Biceps, quadriceps, hamstrings");
+        add(B_answerRb);
+        B_answerRb.setBounds(20, 370, 230, 23);
+
+        C_answerRb.setText("C - Calf, quadriceps, hamstrings, Gluteus");
+        add(C_answerRb);
+        C_answerRb.setBounds(20, 390, 240, 23);
+
+        D_answerRb.setText("D - Gluteus, quadriceps, hamstrings");
+        add(D_answerRb);
+        D_answerRb.setBounds(20, 410, 210, 23);
+
+        ansLbl.setText("Answer:");
+        add(ansLbl);
+        ansLbl.setBounds(20, 440, 40, 14);
+        add(ansTf);
+        ansTf.setBounds(70, 440, 40, 20);
+
+        submitBtn.setText("Submit ");
+        add(submitBtn);
+        submitBtn.setBounds(130, 440, 73, 23);
 
         nextBtn.setText("Next");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -64,9 +93,8 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
                 nextBtnActionPerformed(evt);
             }
         });
-
-        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleLbl.setText("Image Quiz ");
+        add(nextBtn);
+        nextBtn.setBounds(380, 460, 55, 23);
 
         previousBtn.setText("previous");
         previousBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -74,75 +102,24 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
                 previousBtnActionPerformed(evt);
             }
         });
+        add(previousBtn);
+        previousBtn.setBounds(290, 460, 80, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(previousBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nextBtn)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(ansLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ansTf, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(verifyTf, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(submitBtn)
-                    .addComponent(question3Lbl)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton1))
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4))))
-                .addContainerGap(157, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(question3Lbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton4))
-                .addGap(18, 18, 18)
-                .addComponent(submitBtn)
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ansLbl)
-                    .addComponent(ansTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(verifyTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nextBtn)
-                    .addComponent(previousBtn))
-                .addGap(14, 14, 14))
-        );
+        panelLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\Wagner Semboloni\\College\\NCI\\First Year\\2 Semester\\OOP\\Project OOP\\OOP Project\\src\\quadriceps.png")); // NOI18N
+        add(panelLbl);
+        panelLbl.setBounds(40, 80, 370, 260);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void A_answerRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A_answerRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A_answerRbActionPerformed
 
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
         // TODO add your handling code here:
         LayoutManager layout = getParent().getLayout();
         if(layout instanceof CardLayout){
             CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "BioImageQuiz3");
+            cl.show(getParent(), "BioImageQuiz4");
         }
     }//GEN-LAST:event_nextBtnActionPerformed
 
@@ -157,17 +134,17 @@ public class BioImageQuiz3 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton A_answerRb;
+    private javax.swing.JRadioButton B_answerRb;
+    private javax.swing.JRadioButton C_answerRb;
+    private javax.swing.JRadioButton D_answerRb;
     private javax.swing.JLabel ansLbl;
     private javax.swing.JTextField ansTf;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JButton nextBtn;
+    private javax.swing.JLabel panelLbl;
     private javax.swing.JButton previousBtn;
     private javax.swing.JLabel question3Lbl;
     private javax.swing.JButton submitBtn;
     private javax.swing.JLabel titleLbl;
-    private javax.swing.JTextField verifyTf;
     // End of variables declaration//GEN-END:variables
 }

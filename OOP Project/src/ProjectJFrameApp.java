@@ -65,6 +65,8 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             BioCellsNotes BioCellsCard = new BioCellsNotes();
             BioGeneticsNotes BioGeneticsCard = new BioGeneticsNotes();
             
+           //Pop Quiz
+            BioPopQuizMenu BioPopQuizMenuCard = new BioPopQuizMenu();
            //IMAGE QUIZ
             BioImageQuiz BioImageQuizCard = new BioImageQuiz();
             BioImageQuiz2 BioImageQuiz2Card = new BioImageQuiz2();
@@ -107,7 +109,6 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(examCard, "Exams");
     
    //Biology
-  //cardsContainer.add(BioImageCard, "BioImageQuiz");
    cardsContainer.add(BioCard, "Biology");
    cardsContainer.add(NotesBioCard, "NotesBio");
    cardsContainer.add(BioHbCard, "BioHbNotes");
@@ -117,6 +118,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
    cardsContainer.add(BioImageQuizCard,"BioImageQuiz");
    cardsContainer.add(BioImageQuiz2Card,"BioImageQuiz2");
    cardsContainer.add(BioImageQuiz3Card,"BioImageQuiz3");
+   cardsContainer.add(BioPopQuizMenuCard, "BioPopQuizMenu");
    
         this.add(cardsContainer);
         CardLayout cl = (CardLayout)(cardsContainer.getLayout());

@@ -30,33 +30,52 @@ public class BioImageQuiz extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        questionLbl = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        ansARb = new javax.swing.JRadioButton();
-        ansCRb = new javax.swing.JRadioButton();
-        ansBRb = new javax.swing.JRadioButton();
-        ansDRb = new javax.swing.JRadioButton();
-        ansTf = new javax.swing.JTextField();
-        verifyTf = new javax.swing.JTextField();
-        ansTitleLbl = new javax.swing.JLabel();
-        nextBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        titleLbl = new javax.swing.JLabel();
+        question3Lbl = new javax.swing.JLabel();
+        A_answerRb = new javax.swing.JRadioButton();
+        B_answerRb = new javax.swing.JRadioButton();
+        C_answerRb = new javax.swing.JRadioButton();
+        D_answerRb = new javax.swing.JRadioButton();
         submitBtn = new javax.swing.JButton();
+        nextBtn = new javax.swing.JButton();
+        ansLbl = new javax.swing.JLabel();
+        ansTf = new javax.swing.JTextField();
+        panelLbl = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
 
-        questionLbl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        questionLbl.setText("Question 1");
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Image Quiz");
+        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        titleLbl.setText("Image Quiz ");
+        jPanel1.add(titleLbl);
+        titleLbl.setBounds(20, 10, 83, 40);
 
-        ansARb.setText(" A ");
+        question3Lbl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        question3Lbl.setText("Question 1: Which muscle is represented on picture Bellow?");
+        jPanel1.add(question3Lbl);
+        question3Lbl.setBounds(20, 60, 360, 15);
 
-        ansCRb.setText("B");
+        A_answerRb.setText("A -  Triceps");
+        jPanel1.add(A_answerRb);
+        A_answerRb.setBounds(30, 290, 79, 23);
 
-        ansBRb.setText("C");
+        B_answerRb.setText("B -  Biceps ");
+        jPanel1.add(B_answerRb);
+        B_answerRb.setBounds(30, 310, 77, 23);
 
-        ansDRb.setText("D");
+        C_answerRb.setText("C - Trapezius");
+        jPanel1.add(C_answerRb);
+        C_answerRb.setBounds(30, 330, 89, 23);
 
-        ansTitleLbl.setText("Answer: ");
+        D_answerRb.setText("D - Latissimus dorsi");
+        jPanel1.add(D_answerRb);
+        D_answerRb.setBounds(30, 350, 140, 23);
+
+        submitBtn.setText("Submit ");
+        jPanel1.add(submitBtn);
+        submitBtn.setBounds(60, 390, 73, 23);
 
         nextBtn.setText("Next");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -64,67 +83,37 @@ public class BioImageQuiz extends javax.swing.JPanel {
                 nextBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(nextBtn);
+        nextBtn.setBounds(380, 460, 55, 23);
 
-        submitBtn.setText("Submit ");
+        ansLbl.setText("Answer:");
+        jPanel1.add(ansLbl);
+        ansLbl.setBounds(20, 430, 40, 14);
+        jPanel1.add(ansTf);
+        ansTf.setBounds(70, 430, 130, 20);
+
+        panelLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\Wagner Semboloni\\College\\NCI\\First Year\\2 Semester\\OOP\\Project OOP\\OOP Project\\src\\biceps.png")); // NOI18N
+        jPanel1.add(panelLbl);
+        panelLbl.setBounds(0, 60, 440, 370);
+
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backBtn);
+        backBtn.setBounds(10, 460, 55, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nextBtn)
-                .addGap(19, 19, 19))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitBtn)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(ansTitleLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ansTf, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(verifyTf, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(questionLbl)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ansARb)
-                            .addComponent(ansCRb))
-                        .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ansBRb)
-                            .addComponent(ansDRb))))
-                .addContainerGap(153, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(questionLbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ansBRb, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ansARb, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ansDRb)
-                    .addComponent(ansCRb, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addComponent(submitBtn)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(nextBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ansTitleLbl)
-                            .addComponent(ansTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(verifyTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -134,21 +123,32 @@ public class BioImageQuiz extends javax.swing.JPanel {
         if(layout instanceof CardLayout){
             CardLayout cl = (CardLayout)layout;
             cl.show(getParent(), "BioImageQuiz2");
-        }       
+        }        
     }//GEN-LAST:event_nextBtnActionPerformed
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if(layout instanceof CardLayout){
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "Biology");
+        }     
+    }//GEN-LAST:event_backBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton ansARb;
-    private javax.swing.JRadioButton ansBRb;
-    private javax.swing.JRadioButton ansCRb;
-    private javax.swing.JRadioButton ansDRb;
+    private javax.swing.JRadioButton A_answerRb;
+    private javax.swing.JRadioButton B_answerRb;
+    private javax.swing.JRadioButton C_answerRb;
+    private javax.swing.JRadioButton D_answerRb;
+    private javax.swing.JLabel ansLbl;
     private javax.swing.JTextField ansTf;
-    private javax.swing.JLabel ansTitleLbl;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nextBtn;
-    private javax.swing.JLabel questionLbl;
+    private javax.swing.JLabel panelLbl;
+    private javax.swing.JLabel question3Lbl;
     private javax.swing.JButton submitBtn;
-    private javax.swing.JTextField verifyTf;
+    private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }
