@@ -79,16 +79,25 @@
           <Dimension value="[93, 23]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nutriBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bloodCellBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Blood Cells"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bloodCellBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="geneticsBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Genetics"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="geneticsBtnActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -136,10 +136,10 @@ public class Biology extends javax.swing.JPanel {
 
     private void bioPoQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bioPoQuizActionPerformed
         // TODO add your handling code here:
-                 LayoutManager layout = getParent().getLayout();
+        LayoutManager layout = getParent().getLayout();
         if (layout instanceof CardLayout) {
             CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "BioQuiz");
+            cl.show(getParent(), "BioPopQuizMenu");
         }
     }//GEN-LAST:event_bioPoQuizActionPerformed
 

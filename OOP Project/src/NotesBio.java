@@ -1,3 +1,6 @@
+
+import java.awt.CardLayout;
+import java.awt.LayoutManager;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -44,10 +47,25 @@ public class NotesBio extends javax.swing.JPanel {
         nutriBtn.setMaximumSize(new java.awt.Dimension(93, 23));
         nutriBtn.setMinimumSize(new java.awt.Dimension(93, 23));
         nutriBtn.setPreferredSize(new java.awt.Dimension(93, 23));
+        nutriBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nutriBtnActionPerformed(evt);
+            }
+        });
 
         bloodCellBtn.setText("Blood Cells");
+        bloodCellBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bloodCellBtnActionPerformed(evt);
+            }
+        });
 
         geneticsBtn.setText("Genetics");
+        geneticsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                geneticsBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -86,9 +104,36 @@ public class NotesBio extends javax.swing.JPanel {
         LayoutManager layout = getParent().getLayout();
         if(layout instanceof CardLayout){
             CardLayout cl = (CardLayout)layout;
-            cl.show(getParent(), "HumanBody")
+            cl.show(getParent(), "BioHbNotes");
         }
     }//GEN-LAST:event_humanBodyBtnActionPerformed
+
+    private void nutriBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutriBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if(layout instanceof CardLayout){
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "BioNutriNotes");
+        }
+    }//GEN-LAST:event_nutriBtnActionPerformed
+
+    private void bloodCellBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodCellBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if(layout instanceof CardLayout){
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "BioCellsNotes");
+        }       
+    }//GEN-LAST:event_bloodCellBtnActionPerformed
+
+    private void geneticsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geneticsBtnActionPerformed
+        // TODO add your handling code here:
+        LayoutManager layout = getParent().getLayout();
+        if(layout instanceof CardLayout){
+            CardLayout cl = (CardLayout)layout;
+            cl.show(getParent(), "BioGeneticsNotes");
+        }
+    }//GEN-LAST:event_geneticsBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

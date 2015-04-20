@@ -62,9 +62,19 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             
         //Biology
             Biology BioCard = new Biology();
-            BioPopQuiz BioQCard = new BioPopQuiz();
-            //BioImgQuiz BioImageCard = new BioImgQuiz();
             NotesBio NotesBioCard = new NotesBio();
+            BioHbNotes BioHbCard = new BioHbNotes();
+            BioNutriNotes BioNutriCard = new BioNutriNotes();
+            BioCellsNotes BioCellsCard = new BioCellsNotes();
+            BioGeneticsNotes BioGeneticsCard = new BioGeneticsNotes();
+            
+           //Pop Quiz
+            BioPopQuizMenu BioPopQuizMenuCard = new BioPopQuizMenu();
+           //IMAGE QUIZ
+            BioImageQuiz BioImageQuizCard = new BioImageQuiz();
+            BioImageQuiz2 BioImageQuiz2Card = new BioImageQuiz2();
+            BioImageQuiz3 BioImageQuiz3Card = new BioImageQuiz3();
+            
             
             //physics
     cardsContainer = new JPanel(new CardLayout ());
@@ -80,7 +90,7 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(timeCard, "Timeline");
     
      //Geography
-   cardsContainer.add(geographyCard, "Geography");
+    cardsContainer.add(geographyCard, "Geography");
     cardsContainer.add(quizGeoCard, "Quiz");
     cardsContainer.add(imageQuizCard, "Image Quiz");
     cardsContainer.add(textQuizCard, "Text Quiz");
@@ -102,13 +112,20 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(topicsCard, "Topics");
     cardsContainer.add(mQuizCard, "MathsQuiz");
     cardsContainer.add(mFormCard, "MathsFormulas");
-   cardsContainer.add(examCard, "Exams");
+    cardsContainer.add(examCard, "Exams");
     
    //Biology
    cardsContainer.add(BioCard, "Biology");
-   cardsContainer.add(BioQCard, "BioQuiz");
-   //cardsContainer.add(BioImageCard, "BioImageQuiz");
    cardsContainer.add(NotesBioCard, "NotesBio");
+   cardsContainer.add(BioHbCard, "BioHbNotes");
+   cardsContainer.add(BioNutriCard, "BioNutriNotes");
+   cardsContainer.add(BioCellsCard, "BioCellsNotes");
+   cardsContainer.add(BioGeneticsCard, "BioGeneticsNotes");
+   cardsContainer.add(BioImageQuizCard,"BioImageQuiz");
+   cardsContainer.add(BioImageQuiz2Card,"BioImageQuiz2");
+   cardsContainer.add(BioImageQuiz3Card,"BioImageQuiz3");
+   cardsContainer.add(BioPopQuizMenuCard, "BioPopQuizMenu");
+   
         this.add(cardsContainer);
         CardLayout cl = (CardLayout)(cardsContainer.getLayout());
         cl.show(cardsContainer, "Main");
