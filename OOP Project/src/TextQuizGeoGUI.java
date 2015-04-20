@@ -19,25 +19,25 @@ import javax.swing.JOptionPane;
  *
  * @author alexander
  */
-public class RocksNoteGUI extends javax.swing.JPanel {
-
+public class TextQuizGeoGUI extends javax.swing.JPanel {
     
     //variables
-    String rockNote, subject;
+    String question, answer, subject;
     
     //declare array of object
-    RocksNote[] roc;
+    TextQuizGeo[] tex;
     
     //declare counter
     int count;
+
     /**
-     * Creates new form RocksNoteGUI
+     * Creates new form TextQuizGeoGUI
      */
-    public RocksNoteGUI() {
+    public TextQuizGeoGUI() {
         initComponents();
         
         //create array
-        roc = new RocksNote[6];
+        tex = new TextQuizGeo[6];
         //initialise counter
         count = 0;
     }
@@ -52,12 +52,16 @@ public class RocksNoteGUI extends javax.swing.JPanel {
     private void initComponents() {
 
         TitleLbl = new javax.swing.JLabel();
-        Back = new javax.swing.JButton();
-        Home = new javax.swing.JButton();
+        BackBtn = new javax.swing.JButton();
+        HomeBtn = new javax.swing.JButton();
+        CreatLbl = new javax.swing.JLabel();
+        MaximumLbl = new javax.swing.JLabel();
         SubjectLbl = new javax.swing.JLabel();
+        QuestionLbl = new javax.swing.JLabel();
+        AnswerLbl = new javax.swing.JLabel();
         subjectTf = new javax.swing.JTextField();
-        NoteLbl = new javax.swing.JLabel();
-        rockNoteTf = new javax.swing.JTextField();
+        questionTf = new javax.swing.JTextField();
+        answerTf = new javax.swing.JTextField();
         AddBtn = new javax.swing.JButton();
         DisplayBtn = new javax.swing.JButton();
         SearchBtn = new javax.swing.JButton();
@@ -66,33 +70,44 @@ public class RocksNoteGUI extends javax.swing.JPanel {
         ViewBtn = new javax.swing.JButton();
 
         TitleLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        TitleLbl.setText("Rock Note");
+        TitleLbl.setText("Text Quiz");
 
-        Back.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Back.setText("Back");
-        Back.addActionListener(new java.awt.event.ActionListener() {
+        BackBtn.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        BackBtn.setText("Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackActionPerformed(evt);
+                BackBtnActionPerformed(evt);
             }
         });
 
-        Home.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        Home.setText("Home");
-        Home.addActionListener(new java.awt.event.ActionListener() {
+        HomeBtn.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        HomeBtn.setText("Home");
+        HomeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeActionPerformed(evt);
+                HomeBtnActionPerformed(evt);
             }
         });
+
+        CreatLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        CreatLbl.setText("Create your own questions");
+
+        MaximumLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        MaximumLbl.setText("Maximum of six");
 
         SubjectLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         SubjectLbl.setText("Subject");
 
+        QuestionLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        QuestionLbl.setText("Question");
+
+        AnswerLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        AnswerLbl.setText("Answer");
+
         subjectTf.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
 
-        NoteLbl.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        NoteLbl.setText("Note");
+        questionTf.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
 
-        rockNoteTf.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
+        answerTf.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
 
         AddBtn.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
         AddBtn.setText("Add");
@@ -111,7 +126,7 @@ public class RocksNoteGUI extends javax.swing.JPanel {
         });
 
         SearchBtn.setFont(new java.awt.Font("Cambria", 0, 20)); // NOI18N
-        SearchBtn.setText("Search by subject");
+        SearchBtn.setText("Search");
         SearchBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchBtnActionPerformed(evt);
@@ -146,144 +161,150 @@ public class RocksNoteGUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CreatLbl)
+                .addGap(120, 120, 120))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(SubjectLbl)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addComponent(TitleLbl))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(84, 84, 84)
-                                .addComponent(subjectTf, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(DeleteBtn)
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(DisplayBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(SearchBtn))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(SaveBtn)
-                                .addGap(27, 27, 27)
-                                .addComponent(ViewBtn)))))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(NoteLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rockNoteTf))
+                        .addComponent(BackBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(HomeBtn))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Back)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Home))
+                                .addGap(180, 180, 180)
+                                .addComponent(TitleLbl))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(AddBtn)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                                .addGap(150, 150, 150)
+                                .addComponent(MaximumLbl))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AnswerLbl)
+                                    .addComponent(QuestionLbl)
+                                    .addComponent(SubjectLbl)
+                                    .addComponent(AddBtn)
+                                    .addComponent(DeleteBtn))
+                                .addGap(71, 71, 71)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(subjectTf, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(questionTf, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(answerTf, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 43, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(SaveBtn)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(ViewBtn))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(DisplayBtn)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(SearchBtn)))))))
+                        .addGap(16, 16, 16)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(TitleLbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CreatLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MaximumLbl)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(subjectTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SubjectLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(NoteLbl)
-                        .addGap(112, 112, 112)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AddBtn)
-                            .addComponent(DisplayBtn)
-                            .addComponent(SearchBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(SaveBtn)
-                                .addGap(11, 11, 11))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(DeleteBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(rockNoteTf, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                        .addComponent(ViewBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back)
-                    .addComponent(Home))
-                .addGap(6, 6, 6))
+                    .addComponent(questionTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuestionLbl))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answerTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AnswerLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddBtn)
+                    .addComponent(DisplayBtn)
+                    .addComponent(SearchBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DeleteBtn)
+                    .addComponent(SaveBtn)
+                    .addComponent(ViewBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BackBtn)
+                    .addComponent(HomeBtn))
+                .addGap(18, 18, 18))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
         LayoutManager layout = getParent().getLayout();
         if (layout instanceof CardLayout) {
         CardLayout cl = (CardLayout)layout;
-        cl.show(getParent(), "Notes");
-    }            
-    }//GEN-LAST:event_BackActionPerformed
+        cl.show(getParent(), "Quiz");
+    }
+    }//GEN-LAST:event_BackBtnActionPerformed
 
-    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
+    private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
         LayoutManager layout = getParent().getLayout();
         if (layout instanceof CardLayout) {
         CardLayout cl = (CardLayout)layout;
         cl.show(getParent(), "Main");
         }
-    }//GEN-LAST:event_HomeActionPerformed
+    }//GEN-LAST:event_HomeBtnActionPerformed
 
     private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
-        //Declare EarthsNote class
-        RocksNote r;
-        //Create EarthsNote class
-        r = new RocksNote();
+        //Declare TextQuizGeo class
+        TextQuizGeo t;
+        //Create TextQuizGeo class
+        t = new TextQuizGeo();
         
         // get text from textfield
-        rockNote = rockNoteTf.getText();
+        question = questionTf.getText();
         subject = subjectTf.getText();
+        answer = answerTf.getText();
         
         //adding details
-        r.setRockNoteTf(rockNote);
-        r.setSubject(subject);
+        t.setQuestion(question);
+        t.setSubject(subject);
+        t.setAnswer(answer);
         
         //adding object to array
-        roc[count] = r;
+        tex[count] = t;
         //increment counter
         count++;
     }//GEN-LAST:event_AddBtnActionPerformed
 
     private void DisplayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayBtnActionPerformed
         //loop through objects
-        for (int i = 0; i < roc.length; i = i+1){
-            JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "\\n " + roc[i].getSubject());
+        for (int i = 0; i < tex.length; i = i+1){
+            JOptionPane.showMessageDialog(null, " "+ tex[i].QuestionTf() + "/+n " + tex[i].getSubject() + "/+n " + tex[i].getAnswer());
         }
     }//GEN-LAST:event_DisplayBtnActionPerformed
 
     private void SearchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBtnActionPerformed
         String searchSubject = JOptionPane.showInputDialog(null, "Please enter a subject type");
        
-       for(int i = 0; i < roc.length; i = i+1){
-           if(searchSubject.equalsIgnoreCase(roc[i].getSubject())){
-               JOptionPane.showMessageDialog(null, " "+ roc[i].getRockNoteTf() + "\\n " + roc[i].getSubject());
+       for(int i = 0; i < tex.length; i = i+1){
+           if(searchSubject.equalsIgnoreCase(tex[i].getSubject())){
+               JOptionPane.showMessageDialog(null, " "+ tex[i].getQuestionTf() + "/+n " + tex[i].getSubject() + "/+n " + tex[i].getAnswer() );
            }
        }
     }//GEN-LAST:event_SearchBtnActionPerformed
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-        if(subjectTf.getText().equals("")){
+        if(subjectTf.getText().equals("") && questionTf.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Sorry you need to enter subject to delete an object");
         }
         else if(count ==0){
@@ -291,13 +312,13 @@ public class RocksNoteGUI extends javax.swing.JPanel {
         }
         else{
             subject = subjectTf.getText();
-            rockNote = rockNoteTf.getText();
+            question = questionTf.getText();
             
             for (int i = 0; i < count; i = i+1){
-                if(roc[i].getSubject().equals(subject)){
-                    roc[i] = roc[count-1];
+                if(tex[i].getSubject().equals(subject)){
+                    tex[i] = tex[count-1];
                     count = count - 1;
-                    JOptionPane.showMessageDialog (null, "Deleted from the array: "+subject+ "," +rockNote+"from the array. There are" +count+ "items in the array");
+                    JOptionPane.showMessageDialog (null, "Deleted from the array: "+subject+ "," +question+ "," +answer+ "from the array. There are" +count+ "items in the array");
                     break;
                 }
                 if (i==count-1){
@@ -308,12 +329,13 @@ public class RocksNoteGUI extends javax.swing.JPanel {
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
-        rockNote = rockNoteTf.getText();
+        question = questionTf.getText();
         subject = subjectTf.getText();
         
-        RocksNote e = new RocksNote();
-        e.setRockNoteTf(rockNote);
+        TextQuizGeo e = new TextQuizGeo();
+        e.setQuestionTf(question);
         e.setSubject(subject);
+        e.setAnswer(answer);
         
         File outFile;
         FileOutputStream fStream;
@@ -345,10 +367,10 @@ public class RocksNoteGUI extends javax.swing.JPanel {
             fStream = new FileInputStream(inFile);
             oStream = new ObjectInputStream(fStream);
             
-            EarthsNote x;
-            x = (EarthsNote)oStream.readObject();
+            TextQuizGeo x;
+            x = (TextQuizGeo)oStream.readObject();
             
-            JOptionPane.showMessageDialog(null, "Subject: "+x.getSubject() + "Note: " +x.getEarthNoteTf());
+            JOptionPane.showMessageDialog(null, "Subject: "+x.getSubject() + "Question: " +x.getQuestionTf() +"Answer"+ x.getAnswer());
             
             oStream.close();
         }
@@ -363,17 +385,21 @@ public class RocksNoteGUI extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddBtn;
-    private javax.swing.JButton Back;
+    private javax.swing.JLabel AnswerLbl;
+    private javax.swing.JButton BackBtn;
+    private javax.swing.JLabel CreatLbl;
     private javax.swing.JButton DeleteBtn;
     private javax.swing.JButton DisplayBtn;
-    private javax.swing.JButton Home;
-    private javax.swing.JLabel NoteLbl;
+    private javax.swing.JButton HomeBtn;
+    private javax.swing.JLabel MaximumLbl;
+    private javax.swing.JLabel QuestionLbl;
     private javax.swing.JButton SaveBtn;
     private javax.swing.JButton SearchBtn;
     private javax.swing.JLabel SubjectLbl;
     private javax.swing.JLabel TitleLbl;
     private javax.swing.JButton ViewBtn;
-    private javax.swing.JTextField rockNoteTf;
+    private javax.swing.JTextField answerTf;
+    private javax.swing.JTextField questionTf;
     private javax.swing.JTextField subjectTf;
     // End of variables declaration//GEN-END:variables
 }
