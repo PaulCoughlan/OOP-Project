@@ -37,7 +37,7 @@
                               <Component id="Volcanoescard" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="Earthcard" min="-2" max="-2" attributes="0"/>
+                              <Component id="EarthcardBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                               <Component id="Rockcard" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -45,7 +45,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
-                      <Component id="Title" min="-2" max="-2" attributes="0"/>
+                      <Component id="TitleLbl" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
@@ -56,9 +56,9 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Back" min="-2" max="-2" attributes="0"/>
+                      <Component id="BackBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LimitLbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Home" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -71,12 +71,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Title" min="-2" max="-2" attributes="0"/>
+              <Component id="TitleLbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="FlashCards" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Earthcard" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EarthcardBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Rockcard" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
@@ -98,8 +98,8 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Back" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="LimitLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BackBtn" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="Home" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="34" max="32767" attributes="0"/>
@@ -108,7 +108,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="Back">
+    <Component class="javax.swing.JButton" name="BackBtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
@@ -116,10 +116,10 @@
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="Title">
+    <Component class="javax.swing.JLabel" name="TitleLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
@@ -127,7 +127,7 @@
         <Property name="text" type="java.lang.String" value="Notes"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Earthcard">
+    <Component class="javax.swing.JButton" name="EarthcardBtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
@@ -135,7 +135,7 @@
         <Property name="text" type="java.lang.String" value="Earth Card"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EarthcardActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EarthcardBtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Rockcard">
@@ -187,7 +187,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Rocks Note"/>
+        <Property name="text" type="java.lang.String" value="Rock Note"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RocksnoteActionPerformed"/>
@@ -198,7 +198,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Maps Note"/>
+        <Property name="text" type="java.lang.String" value="Map Note"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MapsnoteActionPerformed"/>
@@ -209,7 +209,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Volcanoes Note"/>
+        <Property name="text" type="java.lang.String" value="Volcanoe Note"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VolcanoesnoteActionPerformed"/>
@@ -242,7 +242,7 @@
         <Property name="text" type="java.lang.String" value="User notes"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="LimitLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="20" style="0"/>

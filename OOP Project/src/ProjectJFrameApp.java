@@ -50,6 +50,9 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
             MapCard mapCardCard = new MapCard();
             EarthCard earthCardCard = new EarthCard();
             RocksCard rocksCardCard = new RocksCard();
+            EarthsNoteGUI earthsNoteGUICard = new EarthsNoteGUI();
+            MapsNoteGUI mapsNoteGUICard = new MapsNoteGUI();
+            RocksNoteGUI rocksNoteGUICard = new RocksNoteGUI();
                     
         //Maths
             Exam_Papers  examCard= new Exam_Papers();
@@ -90,7 +93,10 @@ public class ProjectJFrameApp extends javax.swing.JFrame {
     cardsContainer.add(volcanoesCardCard, "Volcanoes Card");
     cardsContainer.add(earthCardCard, "Earth Card");
     cardsContainer.add(rocksCardCard, "Rock Card");
-    cardsContainer.add(mapCardCard, "Map Note");
+    cardsContainer.add(mapCardCard, "Map Card");
+    cardsContainer.add(earthsNoteGUICard,"Earth Note");
+    cardsContainer.add(mapsNoteGUICard,"Maps Note");
+    cardsContainer.add(rocksNoteGUICard,"Rocks Note");
     
     //Maths
     cardsContainer.add(topicsCard, "Topics");
